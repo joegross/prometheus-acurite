@@ -1,0 +1,13 @@
+[Unit]
+Description=prometheus-acurite
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/pi/prometheus-acurite
+ExecStart=/home/pi/prometheus-acurite/prometheus-acurite.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
